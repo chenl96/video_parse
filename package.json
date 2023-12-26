@@ -1,0 +1,32 @@
+{
+  "name": "video_parse",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "axios": "^1.6.2",
+    "danmu.js": "^1.1.13",
+    "element-plus": "^2.4.2",
+    "qs": "^6.11.2",
+    "video.js": "^8.6.1",
+    "videojs-contrib-hls": "^5.15.0",
+    "vue": "^3.3.8",
+    "vue-router": "^4.2.5",
+    "xgplayer": "^3.0.10",
+    "xgplayer-hls": "^3.0.10",
+    "xgplayer-mp4": "^3.0.10",
+    "xgplayer-vue": "^1.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.4",
+    "@vitejs/plugin-vue": "^4.5.0",
+    "sass": "^1.69.5",
+    "vite": "^5.0.0"
+  }
+}
