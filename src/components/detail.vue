@@ -37,7 +37,7 @@
 
     <div class="play-list">
       <div v-for="(item, index) in mvDetail.vlist" class="play-div">
-        <el-button class="play-button" type="info" plain>{{
+        <el-button class="play-button" type="info" plain @click="clickPlay(item)">{{
           item.episode
         }}</el-button>
       </div>
@@ -46,11 +46,23 @@
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router';
+
 const props = defineProps({
     mvInfo: Object,
 });
 const mvDetail = props.mvInfo
-console.log(mvDetail)
+const router = useRouter();
+
+const clickPlay = (item) => {
+  const episodeId = item.id
+  router.push({
+    name: 'play',
+    query: {
+      episodeId: episodeId,
+    }
+  })
+}
 
 
 </script>

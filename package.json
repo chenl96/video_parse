@@ -13,6 +13,8 @@
     "axios": "^1.6.2",
     "danmu.js": "^1.1.13",
     "element-plus": "^2.4.2",
+    "js-base64": "^3.7.5",
+    "pako": "^2.1.0",
     "qs": "^6.11.2",
     "video.js": "^8.6.1",
     "videojs-contrib-hls": "^5.15.0",

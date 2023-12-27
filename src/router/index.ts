@@ -3,11 +3,6 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 
 const routes: Array<RouteRecordRaw> = [
     {
-        path: '/pianku',
-        name: 'film',
-        component: () => import('../views/film.vue')
-    },
-    {
         path: '/search',
         name: 'search',
         component: () => import('../views/search.vue')

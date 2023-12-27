@@ -45,6 +45,7 @@
 import mvInfo from "../components/detail.vue";
 import { ref, getCurrentInstance } from "vue";
 import qs from "qs";
+import {baseWebUrl, token} from "../config";
 
 const currentInstance = getCurrentInstance();
 const { proxy } = getCurrentInstance();
@@ -229,11 +230,11 @@ function clickSearchButton() {
   loading.value = true;
   $http
     .post(
-      "https://ip2787265136.mobgslb.tbcache.com/video/search?cmd=app",
+      `${baseWebUrl}video/search?cmd=app`,
       qs.stringify(data),
       {
         headers: {
-          Authorization: "1060mcrrlc8s2nc1m0lgt95uv0846c",
+          Authorization: token,
           "Content-Type": "application/x-www-form-urlencoded",
         },
       }
@@ -259,11 +260,11 @@ const getDetail = (clickMkey) => {
   mvDetail.value = {};
   $http
     .post(
-      "https://ip2787265136.mobgslb.tbcache.com/video/detail?cmd=app",
+      `${baseWebUrl}video/detail?cmd=app`,
       qs.stringify({ mkey: clickMkey }),
       {
         headers: {
-          Authorization: "1060mcrrlc8s2nc1m0lgt95uv0846c",
+          Authorization: token,
           "Content-Type": "application/x-www-form-urlencoded",
         },
       }
