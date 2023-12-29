@@ -1,7 +1,7 @@
 import pako from 'pako'
 
 const baseWebUrl = 'https://ip2787265136.mobgslb.tbcache.com/'
-const token = "1060mcrrlc8s2nc1m0lgt95uv0846c"
+const token = "1060b94s74lpv75rauhgk92djs83vh"
 
 let decodeM3u8 = function (_0x331b30, _0x291698) {
     var _0x58d3fa = {
@@ -69,8 +69,20 @@ let decodeM3u8 = function (_0x331b30, _0x291698) {
     });
 };
 
+let xmlParse = function(xmlStr) {
+    const parser = new DOMParser();
+    let xmlDoc = parser.parseFromString(xmlStr, 'text/xml');
+    let urlElements = xmlDoc.getElementsByTagName('BaseURL');
+    const videoAudio = {
+        'video': urlElements[0].textContent.replace(/&amp;/g, '&'),
+        'audio': urlElements[1].textContent.replace(/&amp;/g, '&')
+    }
+    return videoAudio;
+}
+
 export {
     baseWebUrl,
     token,
-    decodeM3u8
+    decodeM3u8,
+    xmlParse
 }
