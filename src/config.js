@@ -1,7 +1,7 @@
 import pako from 'pako'
 
 const baseWebUrl = 'https://ip2787265136.mobgslb.tbcache.com/'
-const token = "1060b94s74lpv75rauhgk92djs83vh"
+const token = "1060t4a9836j7jnot4grat9fmqvdkg"
 
 let decodeM3u8 = function (_0x331b30, _0x291698) {
     var _0x58d3fa = {
