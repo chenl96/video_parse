@@ -75,7 +75,6 @@ const getVideoM3u8 = (vid) => {
       }
     });
 };
-initMp4Player()
 const initHlsPlayer = (url) => {
   console.log(videoUrl.value);
   let player = new Player({
@@ -120,13 +119,13 @@ const initMp4Player = (videoAudioDict) => {
     // 当第一个视频的播放时间更新时，同步更新第二个视频的播放时间
     audioPlayer.currentTime = videoPlayer.currentTime;
   });
-  videoPlayer.addListener('play', function() {
+  videoPlayer.addListener("play", function () {
     // 当第一个视频开始播放时，同步开始第二个视频
     audioPlayer.play();
   });
 
   // 监听第一个视频的暂停事件
-  videoPlayer.addListener('pause', function() {
+  videoPlayer.addListener("pause", function () {
     // 当第一个视频暂停时，同步暂停第二个视频
     audioPlayer.pause();
   });
